@@ -17,3 +17,6 @@ The following guides illustrate how to use some features concretely:
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 
+### Use docker
+docker  build -t customer_image  --no-cache --build-arg JAR_FILE=target/*.jar  this is the short way
+docker  build -t customer_image  --no-cache --build-arg JAR_FILE=target/customer-0.0.1-SNAPSHOT.jar .
