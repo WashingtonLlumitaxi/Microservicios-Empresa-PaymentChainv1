@@ -20,3 +20,10 @@ The following guides illustrate how to use some features concretely:
 ### Use docker
 docker  build -t customer_image  --no-cache --build-arg JAR_FILE=target/*.jar  this is the short way
 docker  build -t customer_image  --no-cache --build-arg JAR_FILE=target/customer-0.0.1-SNAPSHOT.jar .
+
+
+Create images
+docker build -t customer_image --no-cache --build-arg JAR_FILE=target/*.jar .
+
+Create container
+docker run -d -p 7080:8080 --name customer_container customer_image:latest
