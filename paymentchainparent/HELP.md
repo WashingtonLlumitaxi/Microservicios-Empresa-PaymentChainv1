@@ -22,8 +22,12 @@ docker  build -t customer_image  --no-cache --build-arg JAR_FILE=target/*.jar  t
 docker  build -t customer_image  --no-cache --build-arg JAR_FILE=target/customer-0.0.1-SNAPSHOT.jar .
 
 
-Create images
+#Create images a partir de la imagen
 docker build -t customer_image --no-cache --build-arg JAR_FILE=target/*.jar .
 
-Create container
+#Ejecutar contenedor a partir de la imagen
 docker run -d -p 7080:8080 --name customer_container customer_image:latest
+
+
+#Ejecutar orquestacion 
+docker compose up -d

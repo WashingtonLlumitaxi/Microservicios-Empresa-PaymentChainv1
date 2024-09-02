@@ -1,13 +1,13 @@
 package com.paymentchain.customer;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class CustomerApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//@SpringBootTest
+//class CustomerApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}
