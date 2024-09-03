@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: after_route
+        uri: https://localhost:8081
+        predicates:
+        - Path=/customer/V1/**
+---
