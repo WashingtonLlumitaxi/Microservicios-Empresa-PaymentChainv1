@@ -41,3 +41,11 @@ Is important configure the environment variables for the perfect functioning the
 -cmd
 - set REPOSITORY_PATH=C:/Users/DELL/Desktop/Microservicios/paymentchainparent/config-server-repo 
 - echo %REPOSITORY_PATH%  
+
+<--- Spring Cloud Gateway --->
+
+![image](https://github.com/user-attachments/assets/733eeaf6-c2c9-410a-bfeb-6de53a124e5c)
+
+- Implementation ApiGateway
+- Creation to package setups (Class: GloblalPostFilter and GlobalPreFilter)
+- 
