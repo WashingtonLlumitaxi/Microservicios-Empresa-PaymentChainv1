@@ -2,18 +2,41 @@
 ---
 server:
     port: 8080
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
 logging:
   level:
     org.springframework.cloud.gateway: DEBUG
     reactor.netty.http.client: DEBUG
 
 spring:
+  application:
+    name: apigateway  
   cloud:
     gateway:
       routes:
-      - id: customer_service
-        uri: http://localhost:8081
+      - id: customer_full
+        uri: lb://businessdomain-customer
         predicates:
-        - Path=/customer/V1/**
----
+        - Path=/customer/V1/full/**
+        filters:
+        - name: AuthenticationFiltering   
+    
+        
+      - id: customer_service
+        uri: lb://businessdomain-customer
+        predicates:
+        - Path=/customer/**
+        
+          
+      - id: transactionService
+        #If the URL has a scheme of lb (such as lb://myservice), it uses the Spring Cloud LoadBalancerClient to resolve the name (myservice in this case) 
+        uri: lb://businessdomain-transactions
+        predicates:
+        - Path=/transaction/**
+        - Method=GET,POST,PUT,DELETE
+        filters:
+        - name: AuthenticationFiltering   
+       
