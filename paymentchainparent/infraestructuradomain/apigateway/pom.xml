@@ -43,6 +43,13 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
+        
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency> 
+        
         <!--
         <dependency> Ya tiene en el project padre
                 <groupId>org.springframework.boot</groupId>
