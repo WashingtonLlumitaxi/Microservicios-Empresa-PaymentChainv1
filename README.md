@@ -48,4 +48,4 @@ Is important configure the environment variables for the perfect functioning the
 
 - Implementation ApiGateway
 - Creation to package setups (Class: GloblalPostFilter and GlobalPreFilter)
-- 
+- C:\Users\DELL>docker-compose -f C:\Users\DELL\Desktop\Microservicios\paymentchainparent\docker-compose.yml up -d keycloack_server
